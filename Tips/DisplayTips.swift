@@ -16,7 +16,7 @@ class DisplayTips{
         if tipsNum != 0{
             for i in 1...tipsNum{
                 let tipsImage25 = UIImageView(image: UIImage(named: imageName))
-                tipsImage25.frame = CGRect(x: positionX, y: positionY - 4*(i+positioni), width: 50, height: 50)
+                tipsImage25.frame = CGRect(x: positionX, y: positionY - 4*(i+positioni), width: 42, height: 42)
                 tipsImage25.isUserInteractionEnabled = true
                 tipsImage25.tag = 11
                 tipsView.addSubview(tipsImage25)

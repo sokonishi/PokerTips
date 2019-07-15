@@ -85,18 +85,19 @@ class TipsDatabase:Object{
 //        return todo!
 //    }
 //
-//    //更新
-//    func update(id: Int,title: String) {
-//        let realm = try! Realm()
-//
-//        let todo = realm.objects(TipsDatabase.self).filter("id = \(id)").first
-//
-//        //更新する時
-//        try! realm.write {
-//            todo!.title = title
-//        }
-//
-//    }
+    //更新
+    func update(id: Int,betPrice: Int) {
+        
+        let realm = try! Realm()
+
+        let database = realm.objects(TipsDatabase.self).filter("id = \(id)").first
+
+        //更新する時
+        try! realm.write {
+            database!.betPrice = betPrice
+        }
+
+    }
 //
 //    //削除
 //    func delete(id: Int) {

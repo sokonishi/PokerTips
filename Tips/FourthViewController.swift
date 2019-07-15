@@ -216,6 +216,8 @@ class FourthViewController: UIViewController {
             betbox[tagvar] = betPrice!
             podSumPrice += betPrice!
             mainPocketLabel.text = String(podSumPrice)
+            
+            tipsDatabase.update(id:tipsDatabase.database[tagvar]["id"]! as! Int , betPrice: restPrice)
         
         }
     
@@ -238,17 +240,20 @@ class FourthViewController: UIViewController {
             
 //            price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
             
-            displayTips.insertTips(tipsNum: podSumPrice/1000, imageName: "Tips_$25", tipsView: maintable,positionX: Int(maintable.center.x),positionY:Int(maintable.center.y), positioni: positioni)
+            displayTips.insertTips(tipsNum: podSumPrice/1000, imageName: "Tips_$25", tipsView: maintable,positionX: 445,positionY:175, positioni: positioni)
             
             positioni += podSumPrice/1000
             
-            displayTips.insertTips(tipsNum: podSumPrice%1000/100, imageName: "Tips_$100", tipsView: maintable,positionX: Int(maintable.center.x), positionY: Int(maintable.center.y),positioni: positioni)
+            displayTips.insertTips(tipsNum: podSumPrice%1000/100, imageName: "Tips_$100", tipsView: maintable,positionX: 445, positionY: 175,positioni: positioni)
             
             positioni += podSumPrice%1000/100
             
-            displayTips.insertTips(tipsNum: podSumPrice%100/10, imageName: "Tips_$50", tipsView: maintable, positionX: Int(maintable.center.x), positionY: Int(maintable.center.y), positioni: positioni)
+            displayTips.insertTips(tipsNum: podSumPrice%100/10, imageName: "Tips_$50", tipsView: maintable, positionX: 445, positionY: 175, positioni: positioni)
             
         }
+        
+        tipsDatabase.getAll()
+        print(tipsDatabase)
         
     }
     

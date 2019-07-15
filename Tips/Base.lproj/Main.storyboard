@@ -585,7 +585,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="テーブルマット枠線-White.png" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-IZ-Qdg">
-                                <rect key="frame" x="111" y="233.5" width="890" height="367"/>
+                                <rect key="frame" x="66.5" y="242" width="979" height="350"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KONIO PORKER CLUB.png" translatesAutoresizingMaskIntoConstraints="NO" id="kQ0-jU-Wv8">
+                                <rect key="frame" x="466" y="353" width="180" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Lkk-R1-ikN"/>
+                                    <constraint firstAttribute="width" constant="180" id="U3g-Th-Bus"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-qP-DFg">
                                 <rect key="frame" x="0.0" y="0.0" width="367" height="292"/>
@@ -726,25 +733,25 @@
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eF9-vn-rqo">
-                                <rect key="frame" x="111" y="242" width="890" height="350"/>
+                                <rect key="frame" x="55.5" y="250" width="1001" height="334"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-y8-K8a">
-                                        <rect key="frame" x="44.5" y="0.0" width="240.5" height="105"/>
+                                        <rect key="frame" x="55" y="0.0" width="270.5" height="100.5"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBc-Du-5VH">
-                                        <rect key="frame" x="325" y="0.0" width="240" height="105"/>
+                                        <rect key="frame" x="365.5" y="0.0" width="270" height="100.5"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cth-OI-0nY">
-                                        <rect key="frame" x="605" y="0.0" width="240.5" height="105"/>
+                                        <rect key="frame" x="675.5" y="0.0" width="270.5" height="100.5"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-Kg-xEf">
-                                        <rect key="frame" x="325" y="245" width="240" height="105"/>
+                                        <rect key="frame" x="365.5" y="233.5" width="270" height="100.5"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVG-7w-6Rp">
-                                        <rect key="frame" x="605" y="245" width="240.5" height="105"/>
+                                        <rect key="frame" x="675.5" y="233.5" width="270.5" height="100.5"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLl-Sp-Sok">
-                                        <rect key="frame" x="44.5" y="245" width="240.5" height="105"/>
+                                        <rect key="frame" x="55" y="233.5" width="270.5" height="100.5"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVU-gV-kti">
                                         <rect key="frame" x="523" y="165" width="75" height="21"/>
@@ -783,17 +790,17 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-wO-3b1">
-                                <rect key="frame" x="64" y="347" width="46" height="30"/>
+                                <rect key="frame" x="49" y="347" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Player LIST"/>
                                 <connections>
                                     <action selector="playerListBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="0tE-Jf-s04"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDX-7p-dN5">
-                                <rect key="frame" x="64" y="475" width="46" height="30"/>
+                                <rect key="frame" x="37" y="475" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Hands up BTN"/>
                                 <connections>
                                     <action selector="sumBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="zwn-1E-rOf"/>
                                 </connections>
@@ -816,14 +823,15 @@
                             <constraint firstItem="Qwa-tj-DZw" firstAttribute="leading" secondItem="gtC-qP-DFg" secondAttribute="trailing" constant="10" id="PdN-wB-OjZ"/>
                             <constraint firstItem="1vO-3j-doV" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.33" id="QbP-cu-BoJ"/>
                             <constraint firstItem="K0y-Ye-1V7" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.35" id="Qwy-Tp-eIx"/>
-                            <constraint firstItem="eF9-vn-rqo" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.42" id="VH6-MN-huy"/>
+                            <constraint firstItem="kQ0-jU-Wv8" firstAttribute="centerY" secondItem="eTg-q9-t5V" secondAttribute="centerY" id="R4M-Ij-DaB"/>
+                            <constraint firstItem="eF9-vn-rqo" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.4" id="VH6-MN-huy"/>
                             <constraint firstItem="eF9-vn-rqo" firstAttribute="centerY" secondItem="eTg-q9-t5V" secondAttribute="centerY" id="Zne-A2-Nmo"/>
                             <constraint firstItem="1vO-3j-doV" firstAttribute="leading" secondItem="Qwa-tj-DZw" secondAttribute="trailing" constant="10" id="Zrv-tq-OgG"/>
-                            <constraint firstItem="hmn-IZ-Qdg" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.8" id="aBl-Z2-bGx"/>
+                            <constraint firstItem="hmn-IZ-Qdg" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.88" id="aBl-Z2-bGx"/>
                             <constraint firstItem="K0y-Ye-1V7" firstAttribute="leading" secondItem="TUt-97-jpK" secondAttribute="leading" id="aQj-GK-wkS"/>
                             <constraint firstItem="gtC-qP-DFg" firstAttribute="leading" secondItem="TUt-97-jpK" secondAttribute="leading" id="b7y-mH-yga"/>
-                            <constraint firstItem="hmn-IZ-Qdg" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.44" id="d5j-PG-dbF"/>
-                            <constraint firstItem="eF9-vn-rqo" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.8" id="dRI-bM-xZb"/>
+                            <constraint firstItem="hmn-IZ-Qdg" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.42" id="d5j-PG-dbF"/>
+                            <constraint firstItem="eF9-vn-rqo" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.9" id="dRI-bM-xZb"/>
                             <constraint firstItem="hmn-IZ-Qdg" firstAttribute="centerY" secondItem="eTg-q9-t5V" secondAttribute="centerY" id="eNr-Ai-XMe"/>
                             <constraint firstItem="hmn-IZ-Qdg" firstAttribute="centerX" secondItem="eTg-q9-t5V" secondAttribute="centerX" id="gXf-RZ-90B"/>
                             <constraint firstItem="Qwa-tj-DZw" firstAttribute="top" secondItem="eTg-q9-t5V" secondAttribute="top" id="krp-0c-dgo"/>
@@ -832,6 +840,7 @@
                             <constraint firstItem="K0y-Ye-1V7" firstAttribute="width" secondItem="eTg-q9-t5V" secondAttribute="width" multiplier="0.33" id="sL4-qg-HHK"/>
                             <constraint firstItem="E8N-u2-M94" firstAttribute="trailing" secondItem="TUt-97-jpK" secondAttribute="trailing" id="tVa-LQ-Hjm"/>
                             <constraint firstItem="E8N-u2-M94" firstAttribute="leading" secondItem="TUt-97-jpK" secondAttribute="leading" id="ulY-Ni-b1a"/>
+                            <constraint firstItem="kQ0-jU-Wv8" firstAttribute="centerX" secondItem="eTg-q9-t5V" secondAttribute="centerX" id="vxg-2s-rfT"/>
                             <constraint firstItem="9OY-c2-3Qg" firstAttribute="bottom" secondItem="TUt-97-jpK" secondAttribute="bottom" id="wIc-5I-rZO"/>
                             <constraint firstItem="gtC-qP-DFg" firstAttribute="height" secondItem="eTg-q9-t5V" secondAttribute="height" multiplier="0.35" id="wg9-hn-hys"/>
                             <constraint firstItem="u7D-Z4-21R" firstAttribute="leading" secondItem="K0y-Ye-1V7" secondAttribute="trailing" constant="10" id="yVh-oc-AJl"/>
@@ -1053,6 +1062,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="KONIO PORKER CLUB.png" width="603.1199951171875" height="446.6400146484375"/>
         <image name="TipSlider.png" width="259.20001220703125" height="561.1199951171875"/>
         <image name="カジノマット-04.png" width="2048.159912109375" height="2732.159912109375"/>
         <image name="カジノマット-2" width="8534" height="11384"/>
