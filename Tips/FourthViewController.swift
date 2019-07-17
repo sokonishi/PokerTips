@@ -35,6 +35,7 @@ class FourthViewController: UIViewController {
     
     @IBOutlet var playerListView: UIView!
     @IBOutlet var betTipsView: UIView!
+    @IBOutlet var winnerView: UIView!
     @IBOutlet weak var verticalSlider: UISlider!
     
     var refreshControl = UIRefreshControl()
@@ -51,6 +52,7 @@ class FourthViewController: UIViewController {
     var tagvar:Int!
     var betbox:[Int] = [0,0,0,0,0,0]
     var podSumPrice:Int!
+    var finalPrice:Int!
     
     @IBOutlet weak var maxPriceLabel: UILabel!
     @IBOutlet weak var minPriceLabel: UILabel!
@@ -73,23 +75,14 @@ class FourthViewController: UIViewController {
         verticalSlider.setThumbImage(UIImage(named: "ThumbSlider.png"), for:.normal)
         
         tipsDatabase.getAll()
+        print(tipsDatabase.database)
         podSumPrice = 0
         
         for i in 0...tipsDatabase.database.count-1 {
-                
-            positioni = 0
             
             price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
-                
-            displayTips.insertTips(tipsNum: price/1000, imageName: "Tips_$25", tipsView: tableArray[i],positionX: 100,positionY:100, positioni: positioni)
 
-            positioni += price/1000
-
-            displayTips.insertTips(tipsNum: price%1000/100, imageName: "Tips_$100", tipsView: tableArray[i],positionX: 100, positionY: 100,positioni: positioni)
-
-            positioni += price%1000/100
-
-            displayTips.insertTips(tipsNum: price%100/10, imageName: "Tips_$50", tipsView: tableArray[i], positionX: 100, positionY: 100, positioni: positioni)
+            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 100,positionY:100)
             
         }
 
@@ -143,24 +136,15 @@ class FourthViewController: UIViewController {
                 subview.removeFromSuperview()
             }
         }
-            
-        positioni = 0
-        
-        displayTips.insertTips(tipsNum: betPrice/1000, imageName: "Tips_$25", tipsView: betTipsView,positionX: 272,positionY:200, positioni: positioni)
-        
-        positioni += betPrice/1000
-        
-        displayTips.insertTips(tipsNum: betPrice%1000/100, imageName: "Tips_$100", tipsView: betTipsView,positionX: 272, positionY: 200,positioni: positioni)
-        
-        positioni += betPrice%1000/100
-        
-        displayTips.insertTips(tipsNum: betPrice%100/10, imageName: "Tips_$50", tipsView: betTipsView, positionX: 272, positionY: 200, positioni: positioni)
-        
+
+        displayTips.showTips(price: betPrice, tableArrayUIView: betTipsView, positionX: 272,positionY: 200)
+
     }
     
     @IBAction func deleteBtn(_ sender: UIButton) {
         self.playerListView.removeFromSuperview()
         self.betTipsView.removeFromSuperview()
+        self.winnerView.removeFromSuperview()
     }
     
     func removeAllSubviews(parentView: UIView){
@@ -174,8 +158,7 @@ class FourthViewController: UIViewController {
     @IBAction func raiseBtn(_ sender: UIButton) {
     
         if betPrice != nil {
-            
-            print("a")
+
             let subViews = self.tableArray[tagvar].subviews
             for subview in subViews{
                 if subview.tag == 11{
@@ -184,33 +167,11 @@ class FourthViewController: UIViewController {
             }
 
             restPrice = playerbetPrice! - betPrice!
-            positioni = 0
 
-            displayTips.insertTips(tipsNum: restPrice/1000, imageName: "Tips_$25", tipsView: tableArray[tagvar],positionX: 100, positionY: 100, positioni: positioni)
+            displayTips.showTips(price: restPrice, tableArrayUIView: tableArray[tagvar], positionX: 100, positionY: 100)
+
+            displayTips.showTips(price: betPrice, tableArrayUIView: pocketArray[tagvar], positionX: 100, positionY: 30)
             
-            positioni += restPrice/1000
-            
-            displayTips.insertTips(tipsNum: restPrice!%1000/100, imageName: "Tips_$100", tipsView: tableArray[tagvar],positionX: 100, positionY: 100, positioni: positioni)
-            
-            positioni += restPrice!%1000/100
-            
-            displayTips.insertTips(tipsNum: restPrice!%100/10, imageName: "Tips_$50", tipsView: tableArray[tagvar],positionX: 100, positionY: 100, positioni: positioni)
-            
-            positioni = 0
-            
-            print("d")
-            print(positioni)
-            displayTips.insertTips(tipsNum: betPrice!/1000, imageName: "Tips_$25", tipsView: pocketArray[tagvar],positionX: 100, positionY: 30, positioni: positioni)
-            
-            positioni += betPrice!/1000
-            print(positioni)
-            displayTips.insertTips(tipsNum: betPrice!%1000/100, imageName: "Tips_$100", tipsView: pocketArray[tagvar],positionX: 100, positionY: 30, positioni: positioni)
-            
-            positioni += betPrice!%1000/100
-            print(positioni)
-            displayTips.insertTips(tipsNum: betPrice!%100/10, imageName: "Tips_$50", tipsView: pocketArray[tagvar],positionX: 100, positionY: 30, positioni: positioni)
-            
-            print("e")
             self.betTipsView.removeFromSuperview()
             
             betbox[tagvar] = betPrice!
@@ -238,17 +199,7 @@ class FourthViewController: UIViewController {
             
             positioni = 0
             
-//            price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
-            
-            displayTips.insertTips(tipsNum: podSumPrice/1000, imageName: "Tips_$25", tipsView: maintable,positionX: 445,positionY:175, positioni: positioni)
-            
-            positioni += podSumPrice/1000
-            
-            displayTips.insertTips(tipsNum: podSumPrice%1000/100, imageName: "Tips_$100", tipsView: maintable,positionX: 445, positionY: 175,positioni: positioni)
-            
-            positioni += podSumPrice%1000/100
-            
-            displayTips.insertTips(tipsNum: podSumPrice%100/10, imageName: "Tips_$50", tipsView: maintable, positionX: 445, positionY: 175, positioni: positioni)
+            displayTips.showTips(price: podSumPrice, tableArrayUIView: maintable, positionX: 445, positionY: 175)
             
         }
         
@@ -256,6 +207,56 @@ class FourthViewController: UIViewController {
         print(tipsDatabase)
         
     }
+    
+    @IBAction func showWinnerBtn(_ sender: UIButton) {
+        
+        self.view.addSubview(winnerView)
+        winnerView.center = self.view.center
+        winnerView.layer.cornerRadius = 5
+        winnerView.layer.masksToBounds = true
+        
+    }
+    
+    @IBAction func winnerBtn(_ sender: UIButton) {
+    
+        tagvar = sender.tag-1
+        
+        finalPrice = (tipsDatabase.database[tagvar]["betPrice"]! as? Int)! + podSumPrice
+        print(finalPrice!)
+        tipsDatabase.update(id:tipsDatabase.database[tagvar]["id"]! as! Int , betPrice: finalPrice)
+        
+        podSumPrice = 0
+        
+        tipsDatabase.database.removeAll()
+        tipsDatabase.getAll()
+        print(tipsDatabase.database)
+        podSumPrice = 0
+        
+        for i in 0...tipsDatabase.database.count-1 {
+            
+            let subViews = self.tableArray[i].subviews
+            for subview in subViews{
+                if subview.tag == 11{
+                    subview.removeFromSuperview()
+                }
+            }
+            
+            price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
+            
+            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 100,positionY:100)
+        }
+        
+        let subViews = self.maintable.subviews
+        for subview in subViews{
+            if subview.tag == 11{
+                subview.removeFromSuperview()
+            }
+        }
+        
+        self.winnerView.removeFromSuperview()
+    }
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 

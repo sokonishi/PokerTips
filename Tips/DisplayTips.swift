@@ -24,4 +24,21 @@ class DisplayTips{
         }
     }
     
+    
+    func showTips(price:Int,tableArrayUIView:UIView,positionX:Int,positionY:Int){
+        
+        var positioni = 0
+        
+        insertTips(tipsNum: price/1000, imageName: "Tips_$25", tipsView: tableArrayUIView,positionX: positionX,positionY:positionY, positioni: positioni)
+        
+        positioni += price/1000
+        
+        insertTips(tipsNum: price%1000/100, imageName: "Tips_$100", tipsView: tableArrayUIView,positionX: positionX, positionY: positionY,positioni: positioni)
+        
+        positioni += price%1000/100
+        
+        insertTips(tipsNum: price%100/10, imageName: "Tips_$50", tipsView: tableArrayUIView, positionX: positionX, positionY: positionY, positioni: positioni)
+        
+    }
+    
 }

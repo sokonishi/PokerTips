@@ -70,21 +70,21 @@ class TipsDatabase:Object{
         }
         
     }
-//
-//    //特定のデータのみ取得
-//    //-> Todoみたいな戻り値がある時は受け取る側でletで定義してあげる
-//    func getDate(id: Int) -> TipsDatabase {
-//
-//        //DB接続
-//        let realm = try! Realm()
-//
-//        //データを取得
-//        let todo = realm.objects(TipsDatabase.self).filter("id = \(id)").first
-//
-//        //取得したデータを返す
-//        return todo!
-//    }
-//
+
+    //特定のデータのみ取得
+    //-> Todoみたいな戻り値がある時は受け取る側でletで定義してあげる
+    func getDate(id: Int) -> TipsDatabase {
+
+        //DB接続
+        let realm = try! Realm()
+
+        //データを取得
+        let database = realm.objects(TipsDatabase.self).filter("id = \(id)").first
+
+        //取得したデータを返す
+        return database!
+    }
+    
     //更新
     func update(id: Int,betPrice: Int) {
         

@@ -754,12 +754,20 @@
                                         <rect key="frame" x="55" y="233.5" width="270.5" height="100.5"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVU-gV-kti">
-                                        <rect key="frame" x="523" y="165" width="75" height="21"/>
+                                        <rect key="frame" x="954" y="95" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-2y-har">
+                                        <rect key="frame" x="955" y="203" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showWinnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="Li7-Ss-HBr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -871,6 +879,7 @@
                         <outlet property="table5" destination="u7D-Z4-21R" id="bjB-ej-g46"/>
                         <outlet property="table6" destination="9OY-c2-3Qg" id="bML-l9-fJz"/>
                         <outlet property="verticalSlider" destination="kGk-FC-UDI" id="A0U-UV-4d9"/>
+                        <outlet property="winnerView" destination="99L-7J-xBj" id="t29-8F-gDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyh-8J-rlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1056,6 +1065,70 @@
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="kew-hc-pfQ"/>
+                </view>
+                <view contentMode="scaleToFill" id="99L-7J-xBj">
+                    <rect key="frame" x="0.0" y="0.0" width="141" height="238"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-zw-SAz">
+                            <rect key="frame" x="90" y="0.0" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="deleteBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="Law-t7-lLB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e6-EZ-5jO">
+                            <rect key="frame" x="45" y="31" width="49" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player1"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="USH-W3-Zlo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B4-jf-IWM">
+                            <rect key="frame" x="44" y="62" width="51" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player2"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="ZIg-JO-aGY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-vT-ixD">
+                            <rect key="frame" x="44" y="92" width="52" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player3"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="KQQ-Po-oR6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mj-xS-vpL">
+                            <rect key="frame" x="44" y="121" width="52" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player4"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="hzR-j6-a6P"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5my-S0-yMf">
+                            <rect key="frame" x="44" y="155" width="52" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player5"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="jZu-Qv-ozQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPS-37-Tsc">
+                            <rect key="frame" x="44" y="188" width="52" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Player6"/>
+                            <connections>
+                                <action selector="winnerBtn:" destination="BHf-w2-1Et" eventType="touchUpInside" id="BH2-N4-sQC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="Fxl-G7-opi"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="835.79136690647488" y="1929.4964028776981"/>
