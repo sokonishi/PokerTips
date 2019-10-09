@@ -82,7 +82,7 @@ class FourthViewController: UIViewController {
             
             price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
 
-            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 100,positionY:100)
+            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 150,positionY:100)
             
         }
 
@@ -168,7 +168,7 @@ class FourthViewController: UIViewController {
 
             restPrice = playerbetPrice! - betPrice!
 
-            displayTips.showTips(price: restPrice, tableArrayUIView: tableArray[tagvar], positionX: 100, positionY: 100)
+            displayTips.showTips(price: restPrice, tableArrayUIView: tableArray[tagvar], positionX: 150, positionY: 100)
 
             displayTips.showTips(price: betPrice, tableArrayUIView: pocketArray[tagvar], positionX: 100, positionY: 30)
             
@@ -243,7 +243,7 @@ class FourthViewController: UIViewController {
             
             price = (tipsDatabase.database[i]["betPrice"]! as? Int)!
             
-            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 100,positionY:100)
+            displayTips.showTips(price: price, tableArrayUIView: tableArray[i],positionX: 150,positionY:100)
         }
         
         let subViews = self.maintable.subviews
@@ -292,6 +292,8 @@ class FourthViewController: UIViewController {
         self.touchesEnded(touches, with: event)
     }
 }
+
+
 
 extension FourthViewController: UITableViewDelegate,UITableViewDataSource {
     

@@ -16,6 +16,7 @@
 		482F30D922A57E4E00090426 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F30D822A57E4E00090426 /* ThirdViewController.swift */; };
 		482F30E122A7B05300090426 /* TipSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 482F30E022A7B05100090426 /* TipSlider.png */; };
 		48387E0222DC623400EE393A /* KONIO PORKER CLUB.png in Resources */ = {isa = PBXBuildFile; fileRef = 48387E0122DC623400EE393A /* KONIO PORKER CLUB.png */; };
+		484B37ED22E5880200226A75 /* firstview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484B37EC22E5880200226A75 /* firstview.jpg */; };
 		4857EC70229AC616001877D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857EC6F229AC616001877D6 /* AppDelegate.swift */; };
 		4857EC72229AC616001877D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857EC71229AC616001877D6 /* ViewController.swift */; };
 		4857EC75229AC616001877D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4857EC73229AC616001877D6 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		482F30D822A57E4E00090426 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		482F30E022A7B05100090426 /* TipSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TipSlider.png; sourceTree = "<group>"; };
 		48387E0122DC623400EE393A /* KONIO PORKER CLUB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KONIO PORKER CLUB.png"; path = "../../../../Desktop/Tips素材/KONIO PORKER CLUB.png"; sourceTree = "<group>"; };
+		484B37EC22E5880200226A75 /* firstview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = firstview.jpg; sourceTree = "<group>"; };
 		4857EC6C229AC616001877D6 /* Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4857EC6F229AC616001877D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4857EC71229AC616001877D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				4857EC81229AC650001877D6 /* Tips_$50.png */,
 				4857EC83229AC650001877D6 /* Tips_$100.png */,
 				48387E0122DC623400EE393A /* KONIO PORKER CLUB.png */,
+				484B37EC22E5880200226A75 /* firstview.jpg */,
 				4805A37D22A2582D00849EF5 /* カジノマット_01.png */,
 				4805A37A22A2582000849EF5 /* カジノマット-02.png */,
 				4805A37C22A2582D00849EF5 /* カジノマット-03.png */,
@@ -229,6 +232,7 @@
 				4805A37B22A2582000849EF5 /* カジノマット-02.png in Resources */,
 				4857EC85229AC651001877D6 /* Tips_$25.png in Resources */,
 				4883CD0822C7394F00F2DDA0 /* テーブルマット枠線-Red.png in Resources */,
+				484B37ED22E5880200226A75 /* firstview.jpg in Resources */,
 				4805A37F22A2582D00849EF5 /* カジノマット_01.png in Resources */,
 				4857EC84229AC651001877D6 /* Tips_$50.png in Resources */,
 				48387E0222DC623400EE393A /* KONIO PORKER CLUB.png in Resources */,
@@ -449,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.konio.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -468,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.konio.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
